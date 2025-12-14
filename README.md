@@ -12,7 +12,7 @@ The Phonebook Application aims to create a phonebook application in Python and d
 
 - As a first step, developer gives you this program that creates a phonebook, adds requested contacts to the phonebook, finds and removes the contacts from the phonebook.
 
-- Application allows users to search, add, update and delete the phonebook records and the phonebook records is kept in separate MySQL database in AWS RDS service. Following is the format of data to be kept in db.
+- Application allows users to search, add, update and delete the phonebook records and the phonebook records are kept in a separate MySQL database in AWS RDS service. Following is the format of data to be kept in db.
 
   - id: unique identifier for the phone record, type is numeric.
 
@@ -20,9 +20,9 @@ The Phonebook Application aims to create a phonebook application in Python and d
 
   - number: phone number of the person. type is numeric.
 
-- All the interactions with user on phonebook app are done in case insensitive manner and name of the person is formatted so that, only the first letters of each words in the name of the person is in capital letters. If the user inputs number in the username field, user is warned with text message.
+- All the interactions with user on phonebook app are done in case-insensitive manner and name of the person is formatted so that, only the first letters of each word in the name of the person is in capital letters. If the user inputs number in the username field, user is warned with text message.
 
-- Phone numbers in the app can be in any format, but the inputs are checked to prevent string type. If the user inputs string in the number field, user is warned with text message.
+- Phone numbers in the app can be in any format, but the inputs are checked to prevent string input. If the user inputs string in the number field, user is warned with text message.
 
 - Example for user inputs and respective formats
 
@@ -46,7 +46,7 @@ thousand                         Warning -> 'Invalid input: Phone number should 
 
 - This app is transformed into web application using the `index.html`, `add-update.html` and `delete.html` within the `templates` folder. Note the followings for your web application.
 
-  - User should face first with `index.html` when web app started and th user should be able to;
+  - User should face first with `index.html` when web app started and the user should be able to;
 
     - search the phonebook using `index.html`.
 
@@ -68,7 +68,7 @@ thousand                         Warning -> 'Invalid input: Phone number should 
 
   - The application stack should be created with new AWS resources.
 
-  - Template should create Application Load Balancer with Auto Scaling Group of Amazon Linux 2023 EC2 Instances within default VPC.
+  - Template should create Application Load Balancer with Auto Scaling Group of Amazon Linux 2023 EC2 Instances within the default VPC.
 
   - Application Load Balancer should be placed within a security group which allows HTTP (80) connections from anywhere.
 
@@ -76,7 +76,7 @@ thousand                         Warning -> 'Invalid input: Phone number should 
 
   - The Auto Scaling Group should use a Launch Template in order to launch instances needed and should be configured to;
 
-    - use all Availability Zones.
+    - use all available `Availability Zones` in the region.
 
     - set desired capacity of instances to `2`
 
@@ -106,7 +106,7 @@ thousand                         Warning -> 'Invalid input: Phone number should 
 
     - Database engine can be `MySQL` with version of `8.0.42`.
 
-  - Phonebook Application Website URL should be given as output by Cloudformation Service, after the stack created.
+  - Phonebook Application Website URL should be provided as an output by Cloudformation Service, after the stack created.
 
 - Nice to have options !!!!!!
   - Using PRIVATE REPO in GitHub
