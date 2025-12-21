@@ -26,7 +26,7 @@ The Phonebook Application aims to create a phonebook application in Python and d
 
 - Example for user inputs and respective formats
 
-```text
+```bash
 Input in username field          Format to convert
 --------------                   -----------------
 ''                               Warning -> 'Invalid input: Name can not be empty'
